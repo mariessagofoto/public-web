@@ -1,0 +1,25 @@
+.wrapper {
+    transition: all .5s ease-out;
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.to-left {
+    opacity: 0;
+    transform: translate(5rem, 0);
+}
+
+.to-right {
+    opacity: 0;
+    transform: translate(-5rem, 0);
+}
+
+.to-bottom {
+    opacity: 0;
+    transform: translate(0, -5rem);
+}
+
+.to-top {
+    opacity: 0;
+    transform: translate(0, 5rem);
+}

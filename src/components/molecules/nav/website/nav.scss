@@ -1,0 +1,54 @@
+@import "../../../../sass/colors.scss";
+@import "../../../../sass/mixins.scss";
+
+.website-nav {
+    display: flex;
+    justify-content: center;
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        display: none;
+    }
+
+    &__link {
+        position: relative;
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 2.5rem;
+        color: $background;
+        transition: all .2s;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: .6rem 2rem;
+        z-index: 2;
+
+        &--small {
+            font-size: 1.8rem;
+        }
+        
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        &:hover {
+            color: $primary;
+            transform: translateY(-.3rem);
+            filter: drop-shadow(0 .4rem 1.6rem rgba(#000, .25));
+            &::before {
+                height: 100%;
+            }
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 100%;
+            background-color: $background;
+            z-index: -1;
+            transition: all .4s;
+            border-radius: .3rem;
+        }
+    }
+}

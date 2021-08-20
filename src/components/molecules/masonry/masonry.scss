@@ -1,0 +1,13 @@
+.masonry {
+    transform: translateY(3rem);
+    display: flex;
+
+    &__column {
+        width: 100%;
+        display: block;
+    }
+}
+
+.masonry-wrapper {
+    margin: 4rem;
+}

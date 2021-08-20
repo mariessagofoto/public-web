@@ -1,0 +1,15 @@
+@import "../../../sass/colors.scss";
+
+.paragraph {
+    font-family: "Roboto";
+    font-weight: 300;
+    color: $primary;
+    letter-spacing: .06rem;
+    word-wrap: break-word;
+    hyphens: auto;
+    line-height: 3.8rem;
+
+    &:not(:last-child) {
+        margin-bottom: 2.5rem;
+    }
+}

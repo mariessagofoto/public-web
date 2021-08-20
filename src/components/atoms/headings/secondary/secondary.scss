@@ -1,0 +1,16 @@
+@import "../../../../sass/colors.scss";
+
+.secondary-heading {
+    font-family: "Petrona";
+    font-size: 3rem;
+    font-weight: normal;
+    color: $primary;
+
+    &__large {
+        font-size: 4rem;
+    }
+
+    &__light {
+        color: $background;
+    }
+}

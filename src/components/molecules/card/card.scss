@@ -1,0 +1,89 @@
+@import "../../../sass/colors.scss";
+@import "../../../sass/mixins.scss";
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+    background-color: $primary;
+    border-radius: .3rem;
+    color: $background;
+    text-align: center;
+    transition: all .2s;
+    filter: drop-shadow(0 .4rem 1.6rem rgba(#000, .1));
+
+    @include respond(tab-port) {
+        height: 60rem;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+        filter: drop-shadow(0 .4rem 2.4rem rgba(#000, .05));
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom right, rgba(#fff, .1), rgba(#fff, .2));
+    }
+
+    &__content {
+        padding: auto 2rem;
+        padding-top: 5rem;
+        transform: translateY(-2.5rem);
+        padding-bottom: 2rem;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        background-color: $primary;
+        
+        @include respond(tab-port) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            clip-path: none;
+            transform: skewY(-3deg) translateY(-50%);
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+            filter: drop-shadow(0 .4rem 2.4rem rgba(#000, .15));
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: .3rem;
+        border-top-right-radius: .3rem;
+    }
+    
+    &__top-text,
+    &__title {
+        position: relative;
+        z-index: 3;
+        margin-top: .4rem;
+    }
+
+    &__top-text {
+        font-size: 2.4rem;
+    }
+
+    &__title {
+        margin-bottom: -1rem;
+    }
+
+    &__tag {
+        position: absolute;
+        top: 2rem;
+        left: -1.2rem;
+        background-color: $secondary;
+        padding: .6rem 1rem;
+        filter: drop-shadow(0 .4rem 1.6rem rgba(#000, .1));
+        z-index: 3;
+    }
+}

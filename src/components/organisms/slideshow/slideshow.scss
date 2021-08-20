@@ -1,0 +1,96 @@
+@import "../../../sass/colors.scss";
+@import "../../../sass/mixins.scss";
+
+.slideshow {
+    &__slide {
+        animation: slideIncoming .5s forwards;
+        transform: translateY(5rem);
+        opacity: 0;
+        
+        &--navigate {
+            animation: slideOutgoing .5s forwards;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-top: 3rem;
+
+        @include respond(phone) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding-top: 4.2rem;
+        }
+
+        &--button {
+            &:not(:last-child) {
+                margin-right: 1.2rem;
+                @include respond(tab-port) {
+                    margin-right: 0;
+                }
+            }
+            animation: buttonFadeIn .5s forwards;
+            
+            @include respond(tab-port) {
+                margin-right: 0;
+                width: 80%;
+                margin-top: 1.2rem;
+            }
+        }
+    }
+
+    &__progress {
+        display: flex;
+        justify-content: center;
+        margin-top: -2rem;
+
+        &--indicator {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: $gray;
+            transition: all .2s;
+            
+            &-filled {
+                background-color: $primary;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
+    }
+}
+
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIncoming {
+    0% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutgoing {
+    0% {
+        transform: translateY(0);
+        opacity: 1;   
+    }
+    100% {
+        transform: translateY(5rem);
+        opacity: 0;
+    }
+}

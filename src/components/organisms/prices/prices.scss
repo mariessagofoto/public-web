@@ -1,0 +1,41 @@
+@import "../../../sass/mixins.scss";
+@import "../../../sass/grid.scss";
+
+.prices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 15rem auto;
+
+    @include respond(tab-port) {
+        margin-bottom: 5rem;
+    }
+    
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__list {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: $grid-width;
+        width: 100%;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__list-item {
+        margin-bottom: 5rem;
+
+        @include respond(tab-port) {
+            width: 80% !important;
+            max-width: none;
+        }
+    }
+}

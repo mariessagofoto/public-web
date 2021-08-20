@@ -1,0 +1,17 @@
+@import "../../../../sass/colors.scss";
+
+.textarea {
+    border: 0;
+    outline: none;
+    padding: 1.2rem 2rem;
+    padding-top: 2rem;
+    font-family: "Roboto";
+    background-color: $gray;
+    font-size: 1.8rem;
+    width: 100%;
+    border-radius: .3rem;
+
+    &::placeholder {
+        font-family: "Roboto";
+    }
+}

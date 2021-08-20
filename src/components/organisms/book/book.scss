@@ -1,0 +1,138 @@
+@import "../../../sass/colors.scss";
+@import "../../../sass/mixins.scss";
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40rem;
+    padding: 8rem 0;
+    padding-bottom: 6rem;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    position: relative;
+
+    @include respond(tab-port) {
+        padding: 0 0;
+    }
+
+    &__error {
+        color: red;
+        text-align: center;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+        animation: fadeIn .2s linear forwards;
+    }
+
+    &__success {
+        color: green;
+        text-align: center;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+        animation: fadeIn .2s linear forwards;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right bottom, rgba(#fff, .0), rgba(#fff, .2));
+        background-color: rgba(#fff, .8);
+        z-index: 1;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 2;
+        filter: drop-shadow(0 .4rem 1.6rem rgba(#000, .15));
+        padding: 5rem;
+        background-color: $background;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        border-radius: .3rem;
+        transition: all .2s;
+
+        &--title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 1.2rem 2.4rem rgba(#000, .1));
+
+            @include respond(tab-port) {
+                transform: scale(1);
+                filter: drop-shadow(0 0 0 rgba(#000, 0));
+            }
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            margin: 0;
+            padding: 4rem;
+            background-color: rgba($background, .5);
+            filter: drop-shadow(0 0 0 rgba(#000, 0));
+        }
+    }
+
+    &__names {
+        display: flex;
+        justify-content: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        &--input {
+            &:not(:last-child) {
+                margin-right: 2.4rem;
+                @include respond(tab-port) {
+                    margin-right: 0;
+                    margin-bottom: 2.4rem;
+                }
+            }
+        }
+    }
+
+    &__email {
+        margin-top: 2.4rem;
+        
+        &--input {
+            width: 100%;
+        }
+    }
+
+    &__message {
+        &--input {
+            margin-top: 2.4rem;
+        }
+    }
+
+    &__send {
+        margin-top: 1.2rem;
+        display: flex;
+        justify-content: flex-end;
+
+        @include respond(tab-port) {
+            justify-content: stretch;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

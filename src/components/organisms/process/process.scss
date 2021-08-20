@@ -1,0 +1,21 @@
+@import "../../../sass/mixins.scss";
+
+.process {
+    margin: 10rem 0;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__before,
+    &__during,
+    &__after {
+        &--title {
+            @include respond(tab-port) {
+                width: 80%;
+                margin: auto;
+            }
+        }
+    }
+}

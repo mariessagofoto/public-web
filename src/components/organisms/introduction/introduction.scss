@@ -1,0 +1,43 @@
+@import "../../../sass/mixins.scss";
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10rem 0;
+
+    @include respond(tab-port) {
+        padding: 5rem 5rem;
+    }
+
+    &__top {
+        margin-bottom: 14rem;
+        @include respond(tab-port) {
+            margin-bottom: 5rem;
+        }
+
+        &--title,
+        &--paragraph {
+            text-align: center;
+        }
+
+        &--title {
+            margin-bottom: .8rem;
+        }
+
+        &--paragraph {
+            width: 100rem;
+
+            @include respond(tab-port) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__splash-row {
+        &--button {
+            align-self: flex-end;
+        }
+    }
+}
