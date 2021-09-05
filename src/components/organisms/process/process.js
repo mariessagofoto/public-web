@@ -35,7 +35,7 @@ const Before = () => {
                 </div>
                 <div className="column-1-of-2">
                     <SecondaryHeading text="Kläder och rekvisita" />
-                    <Paragraph text="Vad det gäller kläder så skall ni tänka på att det fungerar allra bäst med kläder i ljusa färger utan tryck och gärna kläder i olika lager. Önskar ni låna kläder eller rekvistia så lånar vi ut detta utan extra kostnad." />
+                    <Paragraph text="Vad det gäller kläder så skall ni tänka på att det fungerar allra bäst med kläder i ljusa färger utan tryck och gärna kläder i olika lager. Önskar ni låna kläder eller rekvisita så lånar vi ut detta utan extra kostnad." />
                 </div>
             </div>
             <div className="row">
@@ -93,7 +93,7 @@ const After = () => {
             <div className="row">
                 <div className="column-1-of-2">
                     <SecondaryHeading text="Leverans" />
-                    <Paragraph text="De digitala bilderna levereras så snart betalningen är utförd. Önskar ni produktbeställning så skickas produkterna så snart vi kan." />
+                    <Paragraph text="De digitala bilderna levereras så snart betalningen är utförd." />
                 </div>
                 <div className="column-1-of-2">
                     <SecondaryHeading text="Tack" />

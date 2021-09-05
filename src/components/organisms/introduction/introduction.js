@@ -52,7 +52,7 @@ const Introduction = ({bookingSectionRef, portfolioSectionRef}) => {
                 <ViewportFadeIn direction="to-left" offset={0}>
                     <SecondaryHeading text="Fotograferna"/>
                     <Paragraph text="Julia Nilsson, är en utbildad förskolelärare och mamma till två fantastiska små flickor. Susanne Lindahl Hjerpe har en gedigen erfarenhet inom förskolepedagogik och hunduppfödning. Susanne har slutfört fotoutbildningar som behandlar flera olika fotogenrer och redigeringar."/>
-                    <Paragraph text="Tillsammans utgör dem ett fotografteam som med enkelhet kan jobba med barn, hundar och vuxna för att få fram det lilla extra från just din fotografering." />
+                    <Paragraph text="Tillsammans utgör vi ett fotografteam som med enkelhet kan jobba med barn, hundar och vuxna för att få fram det lilla extra från just din fotografering." />
                     <SecondaryButton text="se portfolion" onClick={e => scrollToPortfolio(e)} />
                 </ViewportFadeIn>
             </SplashRow>

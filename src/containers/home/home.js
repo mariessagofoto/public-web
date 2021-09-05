@@ -38,7 +38,7 @@ const Home = () => {
 
     return (
         <div className="App">
-            <Nav facebook="https://facebook.com"/> 
+            <Nav facebook="https://www.facebook.com/groups/848479379265520" instagram="https://www.instagram.com/maries_sagofoto/" /> 
             <Header routes={routes}/>
             <Introduction 
                 bookingSectionRef={bookingSection} 
@@ -52,6 +52,8 @@ const Home = () => {
                 emails={["kontakt@mariessagofoto.se"]}
                 phones={["0735050182", "0708227642"]}
                 addresses={["Nordvära 20, 432 65 Väröbacka"]}
+                facebook="https://www.facebook.com/groups/848479379265520"
+                instagram="https://www.instagram.com/maries_sagofoto/"
             />
         </div>
     )

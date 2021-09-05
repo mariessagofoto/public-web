@@ -31,7 +31,7 @@ const Portfolio = ({sectionRef}) => {
             <ViewportFadeIn direction="to-top" offset={0}>
                 <div className="portfolio__introduction">
                     <PrimaryHeading text="Portfolio" />
-                    <Paragraph text="För dig som gärna vill se våra tidigare projekt visas här de fotografier som vi är lite extra stolta över. Vissa av fotografierna är alldeles nytagna och andra är daterade något år tillbaka." />
+                    <Paragraph text="För dig som gärna vill se våra tidigare projekt så visas här ett urval av fotografier. Vissa av fotografierna är alldeles nytagna och andra är daterade något år tillbaka." />
                 </div>
             </ViewportFadeIn>
             <Masonry images={images} fadeIn={true} />
