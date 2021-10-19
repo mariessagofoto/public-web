@@ -11,21 +11,21 @@ const Prices = ({sectionRef}) => {
                     className="prices__list-item"
                     image={`${process.env.PUBLIC_URL}/assets/book.png`}
                     topText="5 bilder"
-                    title="3800 kr"
+                    title="4200 kr"
                     tagText="I vackert USB-minne"
                 />
                 <Card 
                     className="prices__list-item"
                     image={`${process.env.PUBLIC_URL}/assets/two-boys.jpg`}
                     topText="10 bilder"
-                    title="4800 kr"
+                    title="5200 kr"
                     tagText="I vackert USB-minne"
                 />
                 <Card 
                     className="prices__list-item"
                     image={`${process.env.PUBLIC_URL}/assets/boy-on-raft.jpg`}
                     topText="15 bilder"
-                    title="5500 kr"
+                    title="5900 kr"
                     tagText="I vackert USB-minne"
                 />
             </div>
